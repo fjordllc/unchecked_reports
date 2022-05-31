@@ -6,7 +6,7 @@ require 'fjord_boot_camp'
 def main
   client = FjordBootCamp::Client.new
   client.authenticate(ENV['LOGIN_NAME'], ENV['PASSWORD'])
-  message = client.unassigned_products
+  message = client.unchecked_reports
   puts message
 
   discord = FjordBootCamp::Discord.new
